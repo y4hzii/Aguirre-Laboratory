@@ -4,7 +4,7 @@ class Vehicle {
     private int speed;
     private String fuelType;
 
-    // Constructor
+    // Constructor for Vehicle
     public Vehicle(String brand, int speed, String fuelType) {
         this.brand = brand;
         this.speed = speed;
@@ -64,7 +64,7 @@ class Motorcycle extends Vehicle {
     }
 
 
-// Main method
+// Main method to run the program
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean repeat = true;
