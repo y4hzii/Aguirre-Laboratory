@@ -60,9 +60,9 @@ class Motorcycle extends Vehicle {
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println("Has Sidecar: " + (hasSidecar ? "Yes" : "No"));
+        System.out.println("Has Sidecar: " + (hasSidecar ? "True" : "False"));
     }
-}
+
 
 // Main method
     public static void main(String[] args) {
@@ -73,7 +73,7 @@ class Motorcycle extends Vehicle {
 
         while (repeat) {
             System.out.print("\nWould you like to input a Car or Motorcycle? (car/motorcycle): ");
-            String type = scanner.nextLine().toLowerCase();
+            String type = scanner.nextLine();
 
             if (type.equals("car")) {
                 System.out.print("Enter Car Brand: ");
@@ -92,7 +92,7 @@ class Motorcycle extends Vehicle {
 
                 Car car = new Car(brand, speed, fuelType, doors);
 
-                System.out.println("\n--- Car Details ---");
+                System.out.println("\nCAR DETAILS");
                 car.displayInfo();
 
             } else if (type.equals("motorcycle")) {
@@ -106,7 +106,7 @@ class Motorcycle extends Vehicle {
                 System.out.print("Enter Fuel Type: ");
                 String fuelType = scanner.nextLine();
 
-                System.out.print("Has Sidecar? (yes/no): ");
+                System.out.print("Has Sidecar? (true/false): ");
                 boolean hasSidecar = scanner.nextBoolean();
                 scanner.nextLine(); 
 
@@ -120,7 +120,7 @@ class Motorcycle extends Vehicle {
             }
 
             System.out.print("\nDo you want to add another vehicle? (yes/no): ");
-            String again = scanner.nextLine().toLowerCase();
+            String again = scanner.nextLine();
 
             if (!again.equals("yes")) {
                 repeat = false;
